@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9AD1E933-5D15-4E0F-A378-EA1BE7912D15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectInstaller</RootNamespace>
+    <AssemblyName>ProjectInstaller</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Scryber.Common, Version=0.9.0.0, Culture=neutral, PublicKeyToken=872cbeb81db952fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\scryber.0.9.0.0\lib\net40\Scryber.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Scryber.Components, Version=0.9.0.0, Culture=neutral, PublicKeyToken=872cbeb81db952fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\scryber.0.9.0.0\lib\net40\Scryber.Components.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Scryber.Configuration, Version=0.9.0.0, Culture=neutral, PublicKeyToken=872cbeb81db952fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\scryber.0.9.0.0\lib\net40\Scryber.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Scryber.Drawing, Version=0.9.0.0, Culture=neutral, PublicKeyToken=872cbeb81db952fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\scryber.0.9.0.0\lib\net40\Scryber.Drawing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Scryber.Generation, Version=0.9.0.0, Culture=neutral, PublicKeyToken=872cbeb81db952fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\scryber.0.9.0.0\lib\net40\Scryber.Generation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Scryber.OpenType, Version=0.9.0.0, Culture=neutral, PublicKeyToken=872cbeb81db952fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\scryber.0.9.0.0\lib\net40\Scryber.OpenType.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Scryber.Styles, Version=0.9.0.0, Culture=neutral, PublicKeyToken=872cbeb81db952fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\scryber.0.9.0.0\lib\net40\Scryber.Styles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Schemas\Scryber\Scryber.Components.v09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\Scryber\Scryber.Data.v09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\Scryber\Scryber.Styles.v09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\Scryber\Scryber.Types.v09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\Scryber\Scryber.v09.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
